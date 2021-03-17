@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function TeamSelect() {
   const teamSelect = useSelector(store => store.teamSelect)
   const [teamId, selectTeamId] = useState('')
   const [teamName, setTeamName] = useState('')
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const registerTeam = (event) => {
     event.preventDefault();
 
     dispatch({
-      type: 'TEAM_CREATE',
+      type: 'CREATE_TEAM',
       payload: {
         teamName: teamName,
       },
     });
+    history.push('/home');
   };
 
   return(

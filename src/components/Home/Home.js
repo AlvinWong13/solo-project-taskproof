@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {DayPilot, DayPilotCalendar, DayPilotNavigator} from "daypilot-pro-react";
-import "./CalendarStyles.css";
+import "./Home.css";
 
 const styles = {
   wrap: {
@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-class Calendar extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props);
@@ -108,4 +108,4 @@ class Calendar extends Component {
   }
 }
 
-export default Calendar;
+export default Home;
